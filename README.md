@@ -1,6 +1,7 @@
 This is typical my data workflow which include validation, skim, transform, table, dashboard.
 
 ### create a task
+```
 task = MyTask(filename="a.csv", shape=(14, 12))  # type: ignore
 task.load(pl.read_csv, has_header=True)
 task.filter(pl.col("mpg") > 20)
@@ -16,8 +17,10 @@ try:
     task.app.run()
 except KeyboardInterrupt:
     print("\nShiny app stopped by user.")
+```
 
 ### data manipulation
+```
 df = task.data 
 
 a1 = {"var1": pl.col("mpg") / 10, "var2": (pl.col("mpg") > 25).not_()}
@@ -33,5 +36,5 @@ summarize(df, a4, a5)
 
 res = df.pipe(mutate, x=a1).pipe(subset, row=a2).pipe(summarize, grp=a4, agg_fn=a5)
 print(res)
-
+```
 
