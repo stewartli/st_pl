@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "st_pl"
+version = "0.1.0"
+authors = [
+  {name = "stewartli", email = "sgcaanalytics@gmail.com"},
+]
+maintainers = [
+  {name = "stewartli", email = "sgcaanalytics@gmail.com"}
+]
+description = "The comprehensive data workflow"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["workflow", "data"]
+requires-python = ">= 3.10"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+]
+dependencies = [
+  "polars>=1.26.0,<1.37.0", 
+  "shiny~=1.5.0",
+  "pydantic~=2.12.5",
+]
+
+[project.optional-dependencies]
+
+[project.urls]
+Repository = "https://github.com/stewartli/st_pl.git"
+
+# [project.scripts]
+# stpkgpl_cli = "st_pkg_pl.main:cli"
+
