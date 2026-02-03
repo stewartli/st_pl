@@ -35,6 +35,6 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/stewartli/st_pl.git"
 
-# [project.scripts]
-# stpkgpl_cli = "st_pkg_pl.main:cli"
+[project.scripts]
+st_plcli = "st_pl:cli"
 
